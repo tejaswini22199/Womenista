@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withTheme } from '@material-ui/core/styles';
 
 export default makeStyles(() => ({
   appBar: {
@@ -11,13 +11,18 @@ export default makeStyles(() => ({
   },
   heading: {
     color: '#3A0657',
- 
+     textDecoration:"none",
   },
   image: {
     marginLeft: '15px',
   },
+  textC:{
+    color: '#FFFFFF',
+  },
   buttonSubmit: {
       padding:10,
     margin: 10,
+   
+   
   },
 }));

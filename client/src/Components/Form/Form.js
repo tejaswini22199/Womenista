@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { TextField, Button, Typography, Paper,Grid } from '@material-ui/core';
-// import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import useStyles from './styles.js'
-
+import {createPost} from '../../Actions/getPosts.js'
+//import {useSelector} from 
 const Form = () => {
     const classes = useStyles();
 
@@ -12,12 +13,11 @@ const Form = () => {
         Owner: '',
         Skills: [], 
          });
-//   const post = useSelector((state) => (currentId ? state.posts.find((message) => message._id === currentId) : null));
-//   const dispatch = useDispatch();
- 
-//   useEffect(() => {
-//     if (post) setPostData(post);
-//   }, [post]);
+           // const post = useSelector((state) => (currentId ? state.posts.find((message) => message._id === currentId) : null));
+  const dispatch = useDispatch();
+// useEffect(() => {
+//   if (post) setPostData(post);
+// }, [post]);
 
   const clear = () => {
     // setCurrentId(0);
@@ -26,9 +26,11 @@ const Form = () => {
     Owner: '',
     Skills: []});
   };
-
+//https://go.echoar.xyz/qNUL
   const handleSubmit = async (e) => {
     e.preventDefault();
+    dispatch(createPost(postData));
+    
   };
 
   return (
