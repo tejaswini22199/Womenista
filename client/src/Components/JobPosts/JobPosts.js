@@ -16,7 +16,7 @@ const JobPosts = () => {
           posts.map((post)=>(
             <Grid key={post._id}  item xs={12} sm={6} >
               <Post post={post}/>
-              <h2>Hello</h2>
+            
               </Grid>
           )
           )
