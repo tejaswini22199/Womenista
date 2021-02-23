@@ -4,6 +4,7 @@ export default makeStyles((theme) => ({
   root: {
     '& .MuiTextField-root': {
       margin: theme.spacing(1),
+     
     },
   },
   paper: {
@@ -11,6 +12,7 @@ export default makeStyles((theme) => ({
   },
   form: {
     display: 'flex',
+    flexDirection:'column',
     flexWrap: 'wrap',
     justifyContent: 'center',
   },
@@ -19,6 +21,11 @@ export default makeStyles((theme) => ({
     margin: '10px 0',
   },
   buttonSubmit: {
-    marginBottom: 10,
+    margin: 10,
   },
+  btns:{
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center'
+  }
 }));

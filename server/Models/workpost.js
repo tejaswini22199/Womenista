@@ -2,7 +2,8 @@ import mongoose from 'mongoose';
 
 const postSchema = mongoose.Schema({
     name: String,
-    PointofContact: Number,
+    Contact: Number,
+    toolsUsed:[String],
     selectedFile: String,
     createdAt: {
         type: Date,

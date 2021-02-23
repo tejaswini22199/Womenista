@@ -5,10 +5,10 @@ import PostWork from '../models/workpost.js';
 
 const router = express.Router();
 
-export const getwork = async (req, res) => { 
+export const getWork = async (req, res) => { 
     try {
         const Workmessage = await PostWork.find();
-                
+                console.log("Getworkfunc");
         res.status(200).json(Workmessage);
     } catch (error) {
         res.status(404).json({ message: error.message });
@@ -28,15 +28,16 @@ export const getwork = async (req, res) => {
 // }
 
 export const createWork = async (req, res) => {
-    const {name,PointofContact,selectedFile}= req.body;
+    const {name,Contact,toolsUsed,selectedFile}= req.body;
 
-    const newWorkmessage = new PostJob({ name,PointofContact,selectedFile });
+    const newWorkmessage = new PostWork({ name,Contact,toolsUsed,selectedFile });
     try {
         await newWorkmessage.save();
-
+        console.log("createWork fun");
         res.status(201).json(newWorkmessage);
     } catch (error) {
         res.status(409).json({ message: error.message });
+        console.log("error");
     }
 }
 

@@ -15,17 +15,17 @@ export const getPosts = async (req, res) => {
     }
 }
 
-export const getPost = async (req, res) => { 
-    const { id } = req.params;
+// export const getPost = async (req, res) => { 
+//     const { id } = req.params;
 
-    try {
-        const post = await PostJob.findById(id);
+//     try {
+//         const post = await PostJob.findById(id);
         
-        res.status(200).json(post);
-    } catch (error) {
-        res.status(404).json({ message: error.message });
-    }
-}
+//         res.status(200).json(post);
+//     } catch (error) {
+//         res.status(404).json({ message: error.message });
+//     }
+// }
 
 export const createPost = async (req, res) => {
     const{ Jobtitle,  PointofContact,Owner ,Skills,Pay } = req.body;

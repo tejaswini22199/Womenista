@@ -1,7 +1,10 @@
 import express from 'express'
-import express from 'express'
-import {getwork,PostWork} from '../Controllers/work.js'
+
+import {getWork,createWork} from '../Controllers/work.js'
+
 const router=express.Router();
-router.get('/',getwork);
-router.post('/',PostWork);
+
+router.get('/',getWork);
+router.post('/',createWork);
+
 export default router;

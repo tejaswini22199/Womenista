@@ -1,7 +1,7 @@
 import * as api from '../api/index.js'
 export const getWorks=()=>async(dispatch)=>{
     try {
-        const data=api.getWorks();
+        const data=api.fetchWork();
         dispatch({type:'FETCH_ALL',payload:data});
     } catch (error) {
         console.log(error.message);
