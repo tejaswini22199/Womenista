@@ -4,7 +4,7 @@ import {Grid,CircularProgress} from '@material-ui/core'
 import useStyles from './styles.js'
 import Eachitem from '../Work/Eachitem.js'
 const Workposts=()=>{
-     const workposts= useSelector(state => state.workposts);
+     const workposts= useSelector(state => state.works);
      console.log(workposts);
      const classes=useStyles();
      return(

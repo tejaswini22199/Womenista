@@ -3,13 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
-import { reducers } from './Reducers';
-const store = createStore(reducers, compose(applyMiddleware(thunk)));
+
+
+import postStore from './Store/postStore'
+import Workstore from './Store/Workstore'
+// import { Postreducer,Workreducer } from './Reducers';
+
+// const store = createStore(Workreducer, compose(applyMiddleware(thunk)));
+// console.log("ye hei store")
+// const store=createStore({Postreducer,Workreducer},compose(applyMiddleware(thunk)));
+// console.log("ye hei store2")
 ReactDOM.render(
   <React.StrictMode>
-   <Provider store={store}>
+   <Provider postStore={postStore} Workstore={Workstore} >
     <App />
   </Provider>,
   </React.StrictMode>,

@@ -2,6 +2,7 @@ import './App.css';
 import { Container, AppBar, Typography, Grow, Grid,Button } from '@material-ui/core';
 import Form from './Components/Form/Form.js'
 import  {getPosts} from './Actions/getPosts.js';
+import {getWorks} from './Actions/getwork.js'
 import JobPosts from './Components/JobPosts/JobPosts.js'
 import useStyles from './Styles.js'
 import react,{useEffect,useState} from 'react'
@@ -14,6 +15,7 @@ const App=()=> {
   const classes = useStyles();
   useEffect(() => {
     dispatch(getPosts());
+    dispatch(getWorks());
   }, [ dispatch]);
 
   return (

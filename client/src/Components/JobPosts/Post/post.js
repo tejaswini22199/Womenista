@@ -7,7 +7,7 @@ const Post = ({post}) => {
     return (
         <Card className={classes.card}>
         <CardContent>
-        <Button className={classes.buttonSubmit} color="Secondary" size="large" variant="contained">
+        <Button className={classes.buttonSubmit} color="secondary" size="large" variant="contained">
         {post.Jobtitle}
         </Button>      
           <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>

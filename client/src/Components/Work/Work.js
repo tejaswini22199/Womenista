@@ -15,15 +15,17 @@ const useStyles = makeStyles({
 
 const Work=()=> {
   const classes = useStyles();
-  const works = useSelector((state) => state.works);
+  const works = useSelector((state) => console.log(state.works));
   console.log(works);
   return (
     <Container>
+      <Grid container justify="space-between" alignItems="stretch" spacing={3}>
       <Grid item xs={12} sm={7}>
-     {/* <Workposts/> */}
+     <Workposts/>
       </Grid>
-      <Grid item xs={12} sm={7}>
+      <Grid item xs={12} sm={4}>
       <Workform/>
+      </Grid>
       </Grid>
     </Container>
     

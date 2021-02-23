@@ -29,7 +29,7 @@ const Workform = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch(postWork(workData));
-    
+    console.log(workData);
   };
 
   return (

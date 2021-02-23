@@ -7,4 +7,4 @@ switch(action.type){
     default:
         return works;
 }
-}
+};
