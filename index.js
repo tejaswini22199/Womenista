@@ -15,7 +15,9 @@ app.use('/posts',postRoutes);
 app.use('/work/works',workRoutes);
 
 const PORT = process.env.PORT|| 5000;
-
+if(process.env.NODE_ENV==='PRODUCTION'){
+  app.use(express.static('client/build'))
+}
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
   .catch((error) => console.log(`${error} did not connect`));
